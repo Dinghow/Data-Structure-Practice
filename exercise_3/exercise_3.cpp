@@ -1,6 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<stack>
+#include<string>
 
 using namespace std;
 
@@ -78,10 +79,15 @@ void FindPath(Map t_map, int x, int y,stack<Point> &path) {
 int main() {
 	//create the array and load the map
 	int a, b,entr_x,entr_y;
+	string map_name;
 	stack<Point> path;
 	char **map;
 	Map t_map;
-	ifstream in("map2.txt");
+	
+	cout<<"请输入需要打开的地图全名（包含后缀）：";
+	cin>>map_name;
+	
+	ifstream in(map_name.c_str());
 
 	in >> a >> b;
 	//use second rank pointer to create a dynamic array
