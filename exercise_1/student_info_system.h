@@ -38,7 +38,7 @@ public:
 	};
 
 	//Add node at the list tail
-	void AddNode(Student newStudent) {
+	void AddNode(Student& newStudent) {
 		Node *node = new Node(newStudent);
 		Node *temp = head;
 		if (newStudent.gender == "男")
@@ -54,7 +54,7 @@ public:
 	}
 
 	//Insert node at a precise position
-	void InsertNode(Student newStudent, int position) {
+	void InsertNode(Student &newStudent, int position) {
 		Node *temp = head;
 		Node *node = new Node(newStudent);
 		if (newStudent.gender == "男")
@@ -65,6 +65,7 @@ public:
 			if (i <= length)
 				temp = temp->pNext;
 		}
+		node->pNext = temp->pNext;
 		temp->pNext = node;
 		length++;
 	}
@@ -137,6 +138,6 @@ public:
 	//Analyse the information
 	void AnalyseInfo() {                                                     
 		cout << "共有" << length << "名考生"<<endl;
-		cout << "其中男生有：" << boy_amount << "名" << "女生有：" << girl_amount << "名" << endl;
+		cout << "其中男生有：" << boy_amount << "名" <<endl<< "女生有：" << girl_amount << "名" << endl;
 	}
 };

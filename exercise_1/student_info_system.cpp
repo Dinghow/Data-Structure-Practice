@@ -75,6 +75,7 @@ int main() {
 			students.AnalyseInfo();
 			break;
 		case 0:
+			return 0;
 			break;
 		default:
 			break;
