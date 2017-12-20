@@ -56,6 +56,9 @@ public:
 			delete delNode;
 			length--;
 		}
+		else{
+			cout<<"Can't' find the node!"<<endl;
+		}
 		return;
 	}
 

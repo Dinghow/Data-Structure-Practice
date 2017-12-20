@@ -15,5 +15,6 @@ int main() {
 	CircularLinkList joseph_circle(total);
 	joseph_circle.JosephStart(start, gap, survival);
 	
+	system("pause");
 	return 0;
 }
