@@ -12,7 +12,10 @@ int main() {
 	cin>>map_name;
 	
 	ifstream in(map_name.c_str());
-
+	if(!in){
+		cout<<"没有找到该地图！"<<endl;
+		return 0;
+	}
 	in >> a >> b;
 	//use second rank pointer to create a dynamic array
 	map = new char *[a];
@@ -58,6 +61,7 @@ int main() {
 			r_path.pop();
 		}
 	}
-
+	
+	system("pause");
 	return 0;
 }
