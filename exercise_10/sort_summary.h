@@ -116,7 +116,7 @@ void Qsort(vector<int> &array, int low, int high, int& count) {
 	int key = array[first];//选取数组的第一个元素作为基准元素
 
 	while (first < last) {
-		while (first < last && array[last]>key)
+		while (first < last && array[last]>=key)
 			--last;
 		array[first] = array[last];//将第一个比key小的值移动到最低端
 		while (first < last && array[first] < key)
@@ -137,7 +137,7 @@ void QuickSort(vector<int> &data){
 	start = clock();
 	Qsort(data, 0, data.size() - 1,count);
 	finish = clock();
-	time = start - finish;
+	time = finish - start;
 	cout<<"快速排序所用时间:	"<<time<<"ms"<<endl;
 	cout<<"快速排序交换次数:	"<<count<<endl<<endl;
 }

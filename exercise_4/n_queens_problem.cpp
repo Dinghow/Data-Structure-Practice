@@ -17,4 +17,5 @@ int main() {
 	cout << "There are " << counter << " solutions!" << endl;
 
 	return 0;
+	system("pause");
 }
