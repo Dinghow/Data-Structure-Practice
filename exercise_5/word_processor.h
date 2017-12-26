@@ -45,7 +45,7 @@ string word::getName() {
 	return name;
 }
 
-//Overload
+//Overload <<
 ostream& operator<<(ostream &os, const word &obj) {
 	os << obj.name << ": " << obj.frequency<<" times ";
 	return os;
