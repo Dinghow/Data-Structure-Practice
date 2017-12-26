@@ -11,9 +11,9 @@ private:
 	int frequency;
 	string name;
 public:
-	bool compare(string &r);
 	word();
 	word(string &r);
+	bool compare(string &r);
 	void addFrequency();
 	friend ostream& operator<<(ostream &os, const word &obj);
 	string getName();
@@ -45,7 +45,7 @@ string word::getName() {
 	return name;
 }
 
-//Overload <<
+//Overload
 ostream& operator<<(ostream &os, const word &obj) {
 	os << obj.name << ": " << obj.frequency<<" times ";
 	return os;
