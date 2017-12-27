@@ -18,8 +18,8 @@ class familyTree {
 private:
 	member ancestor;
 public:
-	member* getAncestor() { return &ancestor; }
 	familyTree(member& m_ancestor):ancestor(m_ancestor){}
+	member* getAncestor() { return &ancestor; }
 	member* searchMember(string name,member* node,bool& flag,bool child_model);
 	void addChild(string name, int children_number,vector<string>& children_name);
 	void showNode(string name);
