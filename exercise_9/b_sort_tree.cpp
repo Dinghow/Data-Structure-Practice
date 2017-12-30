@@ -6,7 +6,7 @@ int main() {
 	cout << "======================================"<<endl;
 	cout << "**        1 --- Build the BST     **" << endl;
 	cout << "**        2 --- Insert element    **" << endl;
-	cout << "**        3 --- Searcj element    **" << endl;
+	cout << "**        3 --- Search element    **" << endl;
 	cout << "**        4 --- Exit              **" << endl;
 	cout << "======================================" << endl;
 
